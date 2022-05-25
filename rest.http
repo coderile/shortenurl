@@ -1,0 +1,12 @@
+# create new  short url
+###
+POST  http://localhost:8999/short_url
+Content-Type: application/json
+
+{
+    "url":"https://<any-url>.com"
+}
+
+### redirect to short url
+GET  http://localhost:8999/<short_url_CODE>
+

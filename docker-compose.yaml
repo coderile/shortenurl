@@ -3,7 +3,7 @@ services:
   node:
     restart: always
     build: .
-    port:
+    ports:
       - 8999:8999
   mongo:
     image: mongo
