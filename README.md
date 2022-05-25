@@ -3,3 +3,4 @@
     run the command
 
             > docker-compose up -d --build
+## all endpoints available in rest.http file which is present in root folder of project
