@@ -6,12 +6,8 @@ const urlController= {
     "shortUrl":async(req,res,next)=>{
         try{
             const url = req.body.url
-            if(!helers.isValidURL(url)){
-                res.json({"message":"Please include http"})
-                throw createHttpError.BadRequest('Please enter valid url')
-            }
-            if(!url){
-                res.json({"message":"Please enter valid url as body"})
+            if(!url ||!helers.isValidURL(url)){
+                res.json({"message":"Please valid url including http or https"})
                 throw createHttpError.BadRequest('Please enter valid url')
             }
             const ifUrlExist = await ShortURL.findOne({url})
